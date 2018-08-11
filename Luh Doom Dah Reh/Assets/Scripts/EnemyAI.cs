@@ -8,25 +8,22 @@ public class EnemyAI : MonoBehaviour {
 
     public float hp = 100;
 
+    [SerializeField] private float hpDefault = 100;
     [SerializeField] private float hpLowPercent = 25;
     [SerializeField] private float dmg;
     [SerializeField] private float minFireRate;
     [SerializeField] private float maxFireRate;
-    [SerializeField] private int randomGruntMax = 100000;
+
+    [SerializeField] private Transform bulletSpawnPos;
 
     [SerializeField] private Material hpLowMat;
 
     [SerializeField] private GameObject fireballPrefab;
 
-    [SerializeField] private int deathAnimID;
-    [SerializeField] private int fireAnimID;
-    [SerializeField] private int onHitAnimID;
-    [SerializeField] private int spawnAnimID;
-
-    [SerializeField] private Animation onDeathAnim;
-    [SerializeField] private Animation onFireAnim;
-    [SerializeField] private Animation onHitAnim;
-    [SerializeField] private Animation onSpawnAnim;
+    [SerializeField] private AnimationClip onDeathAnim;
+    [SerializeField] private AnimationClip onFireAnim;
+    [SerializeField] private AnimationClip onHitAnim;
+    [SerializeField] private AnimationClip onSpawnAnim;
 
     [SerializeField] private AudioClip onDeathSound;
     [SerializeField] private AudioClip onFireSound;
@@ -34,6 +31,18 @@ public class EnemyAI : MonoBehaviour {
     [SerializeField] private AudioClip onSpawnSound;
 
     [SerializeField] private AudioClip gruntSound;
+
+    public void TakeDamage (float dmg) {
+        hp -= dmg;
+
+        if (onHitSound != null && hp > 0) {
+            aus.PlayOneShot(onHitSound);
+        }
+
+        if (hp > 0) {
+            anim.SetBool("onHit", true);
+        }
+    }
 
     private bool hpLowBool = false;
 
@@ -79,47 +88,42 @@ public class EnemyAI : MonoBehaviour {
         EndAnimations();
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "EnemyBullet") {
-            hp -= 10; //TOBECHANGED---------------------------------------------------
-
-            if (onHitSound != null && hp > 0) {
-                aus.PlayOneShot(onHitSound);
-            }
-
-            if (hp > 0 && onHitAnimID >= 0) {
-                anim.SetBool(onHitAnimID, true);
-            }
-        }
-    }
-
     private void EndAnimations() {
-
         AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 
-        //Check if his onHit anim ended
-        if (info.IsName(onHitAnim.name) && onHitAnimID >= 0) {
-            if (info.normalizedTime >= -1) {
-                anim.SetBool(onHitAnimID, false);
+        if (info.normalizedTime >= -1) {
+            //onHit
+            if (info.IsName(onHitAnim.name)) {
+                anim.SetBool("onHit", false);
             }
-        } else if (anim.GetBool(onHitAnimID) && onHitAnimID >= 0){
-            anim.SetBool(onHitAnimID, false);
+
+            //onFire
+            if (info.IsName(onFireAnim.name)) {
+                anim.SetBool("onFire", false);
+            }
+
+            //onSpawn
+            if (info.IsName(onSpawnAnim.name)) {
+                anim.SetBool("onSpawn", false);
+            }
+
+            //onDeath
+            if (info.IsName(onDeathAnim.name)) {
+                Destroy(gameObject);
+            }
         }
 
-        if (info.IsName(onSpawnAnim.name)) {
-
-        }
     }
 
     private void Firing() {
         aus.PlayOneShot(onFireSound);
-        anim.SetBool(fireAnimID, true);
-        Instantiate(fireballPrefab);
+        anim.SetBool("onFire", true);
+        Instantiate(fireballPrefab, bulletSpawnPos.position, bulletSpawnPos.rotation);
         timeFire = 0;
     }
 
     private void HpLowCheck() {
-        if (!hpLowBool && (hp < (hp / hpLowPercent * 100))) {
+        if (!hpLowBool && (hp <= ((hpDefault * hpLowPercent) / 100))) {
             Renderer rend = GetComponent<Renderer>();
             if (rend != null) {
                 rend.material = hpLowMat;
@@ -134,11 +138,10 @@ public class EnemyAI : MonoBehaviour {
             aus.PlayOneShot(onDeathSound);
         }
 
-        if (deathAnimID >= 0) {
-            anim.SetBool(deathAnimID, true);
-        }
+        anim.SetBool("onDeath", true);
+    }
 
+    private void OnDestroy() {
         numEnemiesLeft--;
-        Destroy(gameObject);
     }
 }
