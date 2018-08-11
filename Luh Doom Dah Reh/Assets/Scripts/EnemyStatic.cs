@@ -6,7 +6,7 @@ public class EnemyStatic : MonoBehaviour {
 
     [SerializeField] private Transform player;
 
-    private void Update() {
+    private void FixedUpdate() {
         transform.LookAt(player, Vector3.up);
     }
 }

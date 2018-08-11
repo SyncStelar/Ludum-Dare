@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour {
         }
 
         if (EnemyAI.numEnemiesToSpawn > 0 && EnemyAI.numEnemiesLeft < maxNumOfEnemies) {
-            var enemy = Instantiate(enemyPrefab[enemyTypeInt], transform.position, transform.rotation);
+            Instantiate(enemyPrefab[enemyTypeInt], transform.position, transform.rotation);
             time = 0;
         }
     }

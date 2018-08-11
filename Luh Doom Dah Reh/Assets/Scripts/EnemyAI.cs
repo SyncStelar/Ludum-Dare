@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour {
     [SerializeField] private float minFireRate;
     [SerializeField] private float maxFireRate;
 
+    [SerializeField] private Transform bulletSpawnPos;
+
     [SerializeField] private Material hpLowMat;
 
     [SerializeField] private GameObject fireballPrefab;
@@ -29,6 +31,18 @@ public class EnemyAI : MonoBehaviour {
     [SerializeField] private AudioClip onSpawnSound;
 
     [SerializeField] private AudioClip gruntSound;
+
+    public void TakeDamage (float dmg) {
+        hp -= dmg;
+
+        if (onHitSound != null && hp > 0) {
+            aus.PlayOneShot(onHitSound);
+        }
+
+        if (hp > 0) {
+            anim.SetBool("onHit", true);
+        }
+    }
 
     private bool hpLowBool = false;
 
@@ -74,21 +88,6 @@ public class EnemyAI : MonoBehaviour {
         EndAnimations();
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Bullet") {
-            hp -= 10; //TOBECHANGED---------------------------------------------------
-
-            if (onHitSound != null && hp > 0) {
-                aus.PlayOneShot(onHitSound);
-            }
-
-            if (hp > 0) {
-                anim.SetBool("onHit", true);
-            }
-        }
-    }
-
-
     private void EndAnimations() {
         AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 
@@ -119,7 +118,7 @@ public class EnemyAI : MonoBehaviour {
     private void Firing() {
         aus.PlayOneShot(onFireSound);
         anim.SetBool("onFire", true);
-        //Instantiate(fireballPrefab);
+        Instantiate(fireballPrefab, bulletSpawnPos.position, bulletSpawnPos.rotation);
         timeFire = 0;
     }
 
