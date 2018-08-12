@@ -11,21 +11,22 @@ public class EnemySpawner : MonoBehaviour {
 
     [SerializeField] private int maxNumOfEnemies;
 
+    public Transform spawnPos;
     [SerializeField] private List<GameObject> enemyPrefab = new List<GameObject>();
 
-    private bool canSpawn = false;
+    private bool canSpawn = true;
 
     private float time = 0;
 
     private void Update() {
         time += Time.deltaTime;
 
-        if ((!canSpawn || enemyTypeInt >= enemyPrefab.Count) && time < Random.Range(minSpawnRate, MaxSpawnRate)) {
+        if ((!canSpawn || spawnPos != null || enemyTypeInt >= enemyPrefab.Count) && time < Random.Range(minSpawnRate, MaxSpawnRate)) {
             return;
         }
 
         if (EnemyAI.numEnemiesToSpawn > 0 && EnemyAI.numEnemiesLeft < maxNumOfEnemies) {
-            Instantiate(enemyPrefab[enemyTypeInt], transform.position, transform.rotation);
+            Instantiate(enemyPrefab[enemyTypeInt], spawnPos.transform.position, spawnPos.transform.rotation);
             time = 0;
         }
     }
