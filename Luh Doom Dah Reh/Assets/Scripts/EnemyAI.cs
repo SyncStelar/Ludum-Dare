@@ -10,7 +10,6 @@ public class EnemyAI : MonoBehaviour {
 
     [SerializeField] private float hpDefault = 100;
     [SerializeField] private float hpLowPercent = 25;
-    [SerializeField] private float dmg;
     [SerializeField] private float minFireRate;
     [SerializeField] private float maxFireRate;
 

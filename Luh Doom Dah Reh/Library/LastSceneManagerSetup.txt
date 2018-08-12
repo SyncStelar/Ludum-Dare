@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+sceneSetups: []
+=======
 sceneSetups:
-- path: Assets/Scenes/Gunplay_Test.unity
+- path: Assets/Rock Platforms.unity
   isLoaded: 1
   isActive: 1
+>>>>>>> 0e11509f6e275ee208588384adf010301c1a6bbf
