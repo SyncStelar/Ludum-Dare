@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 sceneSetups:
 - path: Assets/Rock Platforms.unity
   isLoaded: 1
   isActive: 1
+=======
+<<<<<<< HEAD
+sceneSetups:
+- path: Assets/Scenes/Roudro_testscene.unity
+  isLoaded: 1
+  isActive: 1
+=======
+sceneSetups: []
+>>>>>>> faae040bda8f967a31ace7d0a0be6bd73ffe3198
+>>>>>>> 4d82296b04bcb3e6287ddebce3714cc46f5ad57a
