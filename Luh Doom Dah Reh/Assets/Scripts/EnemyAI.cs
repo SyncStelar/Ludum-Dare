@@ -51,7 +51,7 @@ public class EnemyAI : MonoBehaviour {
 
     private void Awake() {
         aus = GetComponent<AudioSource>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
 
         numEnemiesLeft++;
     }
