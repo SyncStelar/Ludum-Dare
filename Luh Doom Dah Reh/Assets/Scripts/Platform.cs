@@ -4,29 +4,38 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour {
     public GameObject prefab;
-    List<GameObject> goList;
-    void Start()
-    {
-        goList = new List<GameObject>();
+
+    public List<int> numOfOuterPlatformsPerWave = new List<int>();
+    public List<int> numOfMiddlePlatformsPerWave = new List<int>();
+
+    public List<GameObject> goOuterLayer = new List<GameObject>();
+    private List<Vector3> originOuterLayer = new List<Vector3>();
+
+    public List<GameObject> goMiddleLayer = new List<GameObject>();
+    private List<Vector3> originMiddleLayer = new List<Vector3>();
+
+    private int numOfExistingPlatforms = 0;
+
+    private List<GameObject> goList = new List<GameObject>();
+
+    private void Start() {
+        foreach (GameObject go in goOuterLayer) {
+            originOuterLayer.Add(go.transform.position);
+        }
+
+        foreach (GameObject go in goMiddleLayer) {
+            originMiddleLayer.Add(go.transform.position);
+        }
+
+        numOfExistingPlatforms = goList.Count;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I)) {
-            // This random position is for fun :D
-            Vector3 rndPos = new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), Random.Range(-20, 20));
 
-            // Create a new GameObject from prefab and move to random position
-            goList.Add((GameObject)Instantiate(prefab, rndPos, Quaternion.identity));
-        }
+    }
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log(goList.Count);
-            foreach (GameObject go in goList)
-            {
-                Debug.Log(go.name);
-            }
-        }
+    private void ChangePlatforms() {
+        
     }
 }
