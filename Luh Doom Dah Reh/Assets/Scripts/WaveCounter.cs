@@ -20,7 +20,7 @@ public class WaveCounter : MonoBehaviour {
             waveTextBox.text = "Wave 0";
             waveCount++;
             EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount];
-            platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
+            //platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
             platform.ChangePlatform(platform.goMiddleLayer, platform.numOfMiddlePlatformsPerWave);
         }
     }
@@ -34,7 +34,7 @@ public class WaveCounter : MonoBehaviour {
             if (waveCount < numOfEnemiesToSpawnPerWave.Count) {
                 waveCount++;
                 EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount];
-                platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
+                //platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
                 platform.ChangePlatform(platform.goMiddleLayer, platform.numOfMiddlePlatformsPerWave);
             } else if (endSceneString != null) {
                 SceneManager.LoadScene(endSceneString);
