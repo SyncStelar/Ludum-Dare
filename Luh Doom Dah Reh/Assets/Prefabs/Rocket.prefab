@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 40
-  explosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 2}
+  explosion: {fileID: 1478727209154504, guid: 7346697a6ba130946a61f68ecc0ed69f, type: 2}
 --- !u!198 &198535967911101582
 ParticleSystem:
   m_ObjectHideFlags: 1
