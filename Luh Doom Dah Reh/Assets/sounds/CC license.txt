@@ -1,0 +1,22 @@
+CC 3.0
+
+player_death_fall - https://freesound.org/people/Robinhood76/sounds/132549/
+
+golem_boulder_shoot - https://freesound.org/people/Speedenza/sounds/167842/
+
+environment_impact_rocket - https://freesound.org/people/steveygos93/sounds/80401/
+
+environment_crumble - https://freesound.org/people/Opsaaaaa/sounds/335337/
+
+environment_impact_boulder - https://freesound.org/people/Omar%20Alvarado/sounds/199746/
+
+dragon_death - https://freesound.org/people/qubodup/sounds/219943/
+
+player_hurt2 - https://freesound.org/people/Dirtjm/sounds/262279/
+
+player_shoot_rocket - https://freesound.org/people/smcameron/sounds/51469/
+
+
+CC 1.0
+
+player_landing - https://freesound.org/people/nextmaking/sounds/86005/
