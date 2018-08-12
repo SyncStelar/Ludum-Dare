@@ -5,12 +5,12 @@ using UnityEngine;
 public class Damage : MonoBehaviour {
     public float damage = 100f;
 
-	void OnTriggerEnter(Collider col)
+	void OnCollisionEnter(Collision col)
     {
 
-        if (col.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            PlayerHP player = col.GetComponent<PlayerHP>();
+            PlayerHP player = col.gameObject.GetComponent<PlayerHP>();
             player.TakenDamage(damage);
         }
     }
