@@ -14,10 +14,10 @@ public class WeaponManager : MonoBehaviour
     public GameObject Projectile;
     public GameObject Rocket;
     public Camera cam;
-    public float ProjectileSpeed = 20f;
+    public float ProjectileSpeed = 40f;
+    public float RocketSpeed = 20f;
     int slotNo;
     int lastSlot;
-    int layerMask = 1 << 8;
 
     bool StartWeapon;
 
@@ -114,14 +114,14 @@ public class WeaponManager : MonoBehaviour
                 var bullet = Instantiate(Projectile, bulletSpawn.position, bulletSpawn.rotation);
 
                 bullet.GetComponent<Rigidbody>().velocity = TargetDirection * ProjectileSpeed;
-                Destroy(bullet, 4.0f);
+                
 
             }
             if (slotNo == 1)
             {
                 var bullet = Instantiate(Rocket, bulletSpawn.position, bulletSpawn.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 5f;
-                Destroy(bullet, 4.0f);
+                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * RocketSpeed;
+              
             }
 
         }
@@ -134,14 +134,14 @@ public class WeaponManager : MonoBehaviour
                 var bullet = Instantiate(Projectile, bulletSpawn.position, bulletSpawn.rotation);
 
                 bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * ProjectileSpeed;
-                Destroy(bullet, 4.0f);
+                
 
             }
             if (slotNo == 1)
             {
                 var bullet = Instantiate(Rocket, bulletSpawn.position, bulletSpawn.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 5f;
-                Destroy(bullet, 4.0f);
+                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * RocketSpeed;
+                
             }
         }
 
