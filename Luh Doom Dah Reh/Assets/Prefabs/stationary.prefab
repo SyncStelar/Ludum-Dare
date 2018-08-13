@@ -2226,5 +2226,5 @@ MonoBehaviour:
   onDeathSound: {fileID: 0}
   onFireSound: {fileID: 0}
   onHitSound: {fileID: 0}
-  onSpawnSound: {fileID: 0}
+  onSpawnSound: {fileID: 8300000, guid: afca201517a761f4fbe4bff1e7722e05, type: 3}
   gruntSound: {fileID: 0}
