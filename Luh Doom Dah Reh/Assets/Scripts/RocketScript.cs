@@ -21,32 +21,36 @@ public class RocketScript : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag != "Player")
         {
-            collision.gameObject.GetComponent<EnemyAI>().TakeDamage(Damage);
-            Explode();
-        }
-        else
-        {
-            if (collision.gameObject.tag != "Player")
+            if (collision.gameObject.tag == "Enemy")
             {
+                collision.gameObject.GetComponent<EnemyAI>().TakeDamage(Damage);
                 Explode();
-                //Destroy(collision.gameObject);
-                Debug.Log("Hit Something");
+            }
+            else
+            {
+                if (collision.gameObject.tag != "Player")
+                {
+                    Explode();
+                    //Destroy(collision.gameObject);
+                    Debug.Log("Hit Something");
+
+                }
 
             }
-            
+
         }
+        
 
 
     }
 
     void Explode()
     {
-        var splodin = Instantiate(explosion, transform.position, Quaternion.identity);
+        Instantiate(explosion, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
-        Destroy(splodin, 1.5f);
 
     }
 }

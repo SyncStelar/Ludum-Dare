@@ -9,17 +9,14 @@ public class WeaponManager : MonoBehaviour
 
     [SerializeField]
     public GameObject[] weapons;
-    public Transform bulletSpawn;
     public int Num_Weapons = 2;
-    public GameObject Projectile;
-    public GameObject Rocket;
     public Camera cam;
-    public float ProjectileSpeed = 40f;
-    public float RocketSpeed = 20f;
+    public Animator GunAnim;
     int slotNo;
     int lastSlot;
 
     bool StartWeapon;
+
 
 
     // Use this for initialization
@@ -34,13 +31,12 @@ public class WeaponManager : MonoBehaviour
         StartWeapon = true;
         GetWeapon(slotNo);
         StartWeapon = false;
-        //bulletSpawn = weapons[slotNo].transform.Find("BulletSpawn");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 || Input.GetKeyDown("c"))
         {
             Switch(true);
         }
@@ -48,10 +44,25 @@ public class WeaponManager : MonoBehaviour
         {
             Switch(false);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("1"))
         {
-            Fire();
+            if (slotNo != 0)
+            {
+                slotNo = 0;
+                GetWeapon(slotNo);
+            }
+            
         }
+        if (Input.GetKeyDown("2"))
+        {
+            if (slotNo != 1)
+            {
+                slotNo = 1;
+                GetWeapon(slotNo);
+            }
+
+        }
+        
 
     }
 
@@ -87,8 +98,17 @@ public class WeaponManager : MonoBehaviour
     void GetWeapon(int currentSlot)
     {
         weapons[currentSlot].SetActive(true);
-        bulletSpawn = weapons[slotNo].transform.Find("BulletSpawn");
+        GunAnim = weapons[currentSlot].GetComponent<Animator>();
+        if (currentSlot == 0)
+        {
+            GunAnim.Play("P_Gun_Draw");
 
+        }
+        if (currentSlot == 1)
+        {
+            GunAnim.Play("RLauncher_Draw");
+
+        }
         Debug.Log(currentSlot + " assigned");
         if (StartWeapon != true)
         {
@@ -99,57 +119,8 @@ public class WeaponManager : MonoBehaviour
         lastSlot = currentSlot;
     }
 
-    void Fire()
-    {
-        Debug.Log(slotNo);
-        RaycastHit hit;
-        Vector3 TargetDirection;
+   
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
-        {
-            Debug.DrawRay(cam.transform.position, cam.transform.TransformDirection(Vector3.forward) * hit.distance, Color.red, 10000000f, false);
-            Debug.Log("Did Hit");
-            TargetDirection = hit.point - bulletSpawn.transform.position;
-            TargetDirection.Normalize();
-            if (slotNo == 0)
-            {
-                var bullet = Instantiate(Projectile, bulletSpawn.position, bulletSpawn.rotation);
-
-                bullet.GetComponent<Rigidbody>().velocity = TargetDirection * ProjectileSpeed;
-                
-
-            }
-            if (slotNo == 1)
-            {
-                var bullet = Instantiate(Rocket, bulletSpawn.position, bulletSpawn.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = TargetDirection * RocketSpeed;
-              
-            }
-
-        }
-        else
-        {
-            Debug.DrawRay(cam.transform.position, cam.transform.TransformDirection(Vector3.forward) * 1000, Color.blue, 100f, false);
-            Debug.Log("Did not Hit");
-            if (slotNo == 0)
-            {
-                var bullet = Instantiate(Projectile, bulletSpawn.position, bulletSpawn.rotation);
-
-                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * ProjectileSpeed;
-                
-
-            }
-            if (slotNo == 1)
-            {
-                var bullet = Instantiate(Rocket, bulletSpawn.position, bulletSpawn.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * RocketSpeed;
-                
-            }
-        }
-
-        
-        
-
-
-    }
+    
 }
+

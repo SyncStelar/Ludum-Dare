@@ -17,16 +17,22 @@ public class ProjectileScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag != "Player")
         {
-            collision.gameObject.GetComponent<EnemyAI>().TakeDamage(15f);
-            Destroy(gameObject);
+            if (collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<EnemyAI>().TakeDamage(15f);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                Debug.Log("Hit Something");
+            }
+
         }
-        else
-        {
-            Destroy(gameObject);
-            Debug.Log("Hit Something");
-        }
+
+        
 
         
     }
