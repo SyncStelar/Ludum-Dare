@@ -17,16 +17,17 @@ public class WaveCounter : MonoBehaviour {
 
     private void Start() {
         if (waveTextBox != null) {
-            waveTextBox.text = "Wave 0";
             waveCount++;
-            EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount];
-            //platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
+            waveTextBox.text = "Wave 1";
+            Debug.Log("Wave Count: " + waveCount);
+            EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount - 1];
+            platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
             platform.ChangePlatform(platform.goMiddleLayer, platform.numOfMiddlePlatformsPerWave);
         }
     }
 
     private void Update() {
-        if (waveTextBox != null && waveTextBox.text == string.Format("Wave {0}", waveCount)) {
+        if (waveTextBox == null) {
             return;
         }
 
@@ -34,14 +35,14 @@ public class WaveCounter : MonoBehaviour {
             if (waveCount < numOfEnemiesToSpawnPerWave.Count) {
                 waveCount++;
                 EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount];
-                //platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
+                platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);
                 platform.ChangePlatform(platform.goMiddleLayer, platform.numOfMiddlePlatformsPerWave);
             } else if (endSceneString != null) {
                 SceneManager.LoadScene(endSceneString);
             }
         } 
 
-        if (waveTextBox != null) {
+        if (waveTextBox != null /*&& waveTextBox.text == string.Format("Wave {0}", waveCount)*/) {
             waveTextBox.text = string.Format("Wave {0}", waveCount);
         }
     }

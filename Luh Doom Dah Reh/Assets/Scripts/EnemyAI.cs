@@ -52,6 +52,7 @@ public class EnemyAI : MonoBehaviour {
         aus = GetComponent<AudioSource>();
         anim = GetComponentInChildren<Animator>();
 
+        numEnemiesToSpawn--;
         numEnemiesLeft++;
     }
 
@@ -117,7 +118,8 @@ public class EnemyAI : MonoBehaviour {
     private void Firing() {
         aus.PlayOneShot(onFireSound);
         anim.SetBool("onFire", true);
-        Instantiate(fireballPrefab, bulletSpawnPos.position, bulletSpawnPos.rotation);
+        var fireball = Instantiate(fireballPrefab, bulletSpawnPos.position, bulletSpawnPos.rotation);
+        Destroy(fireball, 5f);
         timeFire = 0;
     }
 

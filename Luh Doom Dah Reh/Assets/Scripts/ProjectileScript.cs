@@ -15,7 +15,7 @@ public class ProjectileScript : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag != "Player")
         {
