@@ -125,7 +125,7 @@ public class EnemyAI : MonoBehaviour {
 
     private void HpLowCheck() {
         if (!hpLowBool && (hp <= ((hpDefault * hpLowPercent) / 100))) {
-            Renderer rend = GetComponent<Renderer>();
+            Renderer rend = GetComponentInChildren<Renderer>();
             if (rend != null) {
                 rend.material = hpLowMat;
             }
