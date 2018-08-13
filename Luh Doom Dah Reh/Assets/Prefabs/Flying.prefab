@@ -2897,13 +2897,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac5e828e538f14418d4815cbbf737d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 50
   hpDefault: 100
   hpLowPercent: 25
   minFireRate: 10
   maxFireRate: 20
   bulletSpawnPos: {fileID: 4636647548833698}
-  hpLowMat: {fileID: 0}
+  hpLowMat: {fileID: 2100000, guid: 2581ae50d741e944d8c93bf54b789093, type: 2}
   fireballPrefab: {fileID: 1767996878980502, guid: c8ba13e8b9b920e4c98bc275b249373a,
     type: 2}
   onDeathAnim: {fileID: 7400000, guid: f15eb0e948cf56f4ea239186806447d8, type: 2}
@@ -2913,7 +2913,7 @@ MonoBehaviour:
   onDeathSound: {fileID: 0}
   onFireSound: {fileID: 0}
   onHitSound: {fileID: 0}
-  onSpawnSound: {fileID: 0}
+  onSpawnSound: {fileID: 8300000, guid: dc3dd860144c1cb429b2ad8f47deb650, type: 3}
   gruntSound: {fileID: 0}
 --- !u!137 &137963987570826222
 SkinnedMeshRenderer:

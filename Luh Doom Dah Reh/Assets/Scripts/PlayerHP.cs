@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour {
     public float health = 100f;
     public Image HP;
-//    public AudioSource TargetHurt;
+    public AudioClip TargetHurt;
+
+    public string gameOverSceneString;
 
     // Use this for initialization
     public void TakenDamage(float amount)
     {
-        
-//        TargetHurt.Play();
+
+        GetComponent<AudioSource>().PlayOneShot(TargetHurt);
         health -= amount;
         if (health <= 0f)
         {
@@ -24,6 +27,7 @@ public class PlayerHP : MonoBehaviour {
     // Update is called once per frame
     void Eliminate()
     {
+        SceneManager.LoadScene(gameOverSceneString);
         Destroy(gameObject);
     }
 }

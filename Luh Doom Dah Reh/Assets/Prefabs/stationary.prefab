@@ -73,8 +73,8 @@ GameObject:
   - component: {fileID: 114746978805586858}
   - component: {fileID: 114446422585663586}
   - component: {fileID: 82588230638656720}
-  - component: {fileID: 64038209409760684}
   - component: {fileID: 54001529623899540}
+  - component: {fileID: 65578933669156166}
   m_Layer: 0
   m_Name: stationary
   m_TagString: Enemy
@@ -1872,20 +1872,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64038209409760684
-MeshCollider:
+--- !u!65 &65578933669156166
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1231014846040924}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 4, y: 2.5, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82257856478613060
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2212,21 +2210,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac5e828e538f14418d4815cbbf737d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 200
+  hp: 100
   hpDefault: 200
   hpLowPercent: 25
   minFireRate: 10
   maxFireRate: 20
   bulletSpawnPos: {fileID: 4006796539193198}
-  hpLowMat: {fileID: 0}
+  hpLowMat: {fileID: 2100000, guid: 2581ae50d741e944d8c93bf54b789093, type: 2}
   fireballPrefab: {fileID: 1575344811762220, guid: e4e2d4be56d7d5c479b890e7f3974889,
     type: 2}
-  onDeathAnim: {fileID: 7400000, guid: 9ec93f93500793645a15bad42a843d88, type: 2}
-  onFireAnim: {fileID: 7400000, guid: 49c82b98887a5b5418c51b071ebb9bf3, type: 2}
-  onHitAnim: {fileID: 7400000, guid: 2366041051ce0f7419bb2c3019504f2b, type: 2}
-  onSpawnAnim: {fileID: 7400000, guid: 98e9f35d28234c24fae67bcc91f3c7a7, type: 2}
+  onDeathAnim: {fileID: 7400000, guid: f15eb0e948cf56f4ea239186806447d8, type: 2}
+  onFireAnim: {fileID: 7400000, guid: bc03b137d1c1503438374ee5fc0a8f17, type: 2}
+  onHitAnim: {fileID: 7400000, guid: 637a2facecdf24a47a46ac4da1c5024c, type: 2}
+  onSpawnAnim: {fileID: 7400000, guid: 6ce41694876eab846bdbf658bcd22a8b, type: 2}
   onDeathSound: {fileID: 0}
   onFireSound: {fileID: 0}
   onHitSound: {fileID: 0}
-  onSpawnSound: {fileID: 0}
+  onSpawnSound: {fileID: 8300000, guid: afca201517a761f4fbe4bff1e7722e05, type: 3}
   gruntSound: {fileID: 0}
