@@ -106,11 +106,10 @@ public class EnemyAI : MonoBehaviour {
             if (info.IsName(onSpawnAnim.name)) {
                 anim.SetBool("onSpawn", false);
             }
+        }
 
-            //onDeath
-            if (info.IsName(onDeathAnim.name)) {
-                Destroy(gameObject);
-            }
+        if (info.IsName(onDeathAnim.name)) {
+            Destroy(gameObject);
         }
 
     }
