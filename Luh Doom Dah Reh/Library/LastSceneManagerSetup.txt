@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/syncotestscene.unity
+- path: Assets/Rock Platforms.unity
   isLoaded: 1
   isActive: 1
