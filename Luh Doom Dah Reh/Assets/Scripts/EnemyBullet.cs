@@ -9,8 +9,8 @@ public class EnemyBullet : MonoBehaviour {
         transform.Translate(0, 0, speed, Space.Self); 
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag != "Enemy") {
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag != "Enemy") {
             Destroy(gameObject);
         }
     }
