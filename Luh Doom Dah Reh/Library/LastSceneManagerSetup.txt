@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-sceneSetups: []
-=======
 sceneSetups:
-- path: Assets/Rock Platforms.unity
+- path: Assets/Scenes/syncotestscene.unity
   isLoaded: 1
   isActive: 1
->>>>>>> 9c9052352f5c32abe47f1cc7dff566e37ddada4f

@@ -11,6 +11,26 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1954305220359196}
   m_IsPrefabAsset: 1
+--- !u!1 &1019455426509970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4083712020181250}
+  - component: {fileID: 33112431930689944}
+  - component: {fileID: 23763657079039026}
+  - component: {fileID: 64611922908300538}
+  - component: {fileID: 95995275912870692}
+  - component: {fileID: 65370758396139208}
+  m_Layer: 0
+  m_Name: Platform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1632291413411566
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,11 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4856704399303170}
-  - component: {fileID: 33649514908552078}
-  - component: {fileID: 23826154382118068}
-  - component: {fileID: 64306001553501798}
   - component: {fileID: 114012232135217314}
-  - component: {fileID: 114135757443120276}
   - component: {fileID: 114500893004429538}
   m_Layer: 0
   m_Name: Inter Rock Platform
@@ -47,6 +63,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4083712020181250
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019455426509970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4856704399303170}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4556260407836882
 Transform:
   m_ObjectHideFlags: 1
@@ -58,7 +87,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4856704399303170}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4856704399303170
 Transform:
@@ -67,19 +96,20 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1954305220359196}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.5, y: 0, z: 8.5}
+  m_LocalPosition: {x: 13.1, y: 43, z: 30.1}
   m_LocalScale: {x: 27.300001, y: 27.300014, z: 27.300014}
   m_Children:
+  - {fileID: 4083712020181250}
   - {fileID: 4556260407836882}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
---- !u!23 &23826154382118068
+--- !u!23 &23763657079039026
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1954305220359196}
+  m_GameObject: {fileID: 1019455426509970}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -109,19 +139,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33649514908552078
+--- !u!33 &33112431930689944
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1954305220359196}
+  m_GameObject: {fileID: 1019455426509970}
   m_Mesh: {fileID: 4300000, guid: 2c58d77e96b7d934bbcbd7d07c348826, type: 3}
---- !u!64 &64306001553501798
+--- !u!64 &64611922908300538
 MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1954305220359196}
+  m_GameObject: {fileID: 1019455426509970}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -130,6 +160,36 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2c58d77e96b7d934bbcbd7d07c348826, type: 3}
+--- !u!65 &65370758396139208
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019455426509970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14334844, y: 0.13838692, z: 0.038662538}
+  m_Center: {x: 0.00018485736, y: -0.0029010023, z: 0.124091685}
+--- !u!95 &95995275912870692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019455426509970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4521982fc44e2db489c31e438786b239, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114012232135217314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,34 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStationary: 1
-  enemyTypeInt: 0
-  minSpawnRate: 10.1
-  MaxSpawnRate: 20.1
-  maxNumOfEnemies: 50
   spawnPos: {fileID: 4556260407836882}
-  enemyPrefab:
-  - {fileID: 1231014846040924, guid: 5694ca51cccc62e4cb86dce8f32f8f3b, type: 2}
-  - {fileID: 1455185088019564, guid: 3d4565b48ef2f1a44bccee78a59a3722, type: 2}
---- !u!114 &114135757443120276
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1954305220359196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0564d30639d454884717c972c703f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStationary: 0
-  enemyTypeInt: 1
-  minSpawnRate: 10.1
-  MaxSpawnRate: 20.1
-  maxNumOfEnemies: 50
-  spawnPos: {fileID: 4556260407836882}
-  enemyPrefab:
-  - {fileID: 1231014846040924, guid: 5694ca51cccc62e4cb86dce8f32f8f3b, type: 2}
-  - {fileID: 1455185088019564, guid: 3d4565b48ef2f1a44bccee78a59a3722, type: 2}
+  enemyPrefab: {fileID: 1231014846040924, guid: 5694ca51cccc62e4cb86dce8f32f8f3b,
+    type: 2}
 --- !u!114 &114500893004429538
 MonoBehaviour:
   m_ObjectHideFlags: 1
