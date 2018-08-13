@@ -34,7 +34,7 @@ public class WeaponManager : MonoBehaviour
         StartWeapon = true;
         GetWeapon(slotNo);
         StartWeapon = false;
-        bulletSpawn = weapons[slotNo].transform.Find("BulletSpawn");
+        //bulletSpawn = weapons[slotNo].transform.Find("BulletSpawn");
     }
 
     // Update is called once per frame
@@ -87,6 +87,8 @@ public class WeaponManager : MonoBehaviour
     void GetWeapon(int currentSlot)
     {
         weapons[currentSlot].SetActive(true);
+        bulletSpawn = weapons[slotNo].transform.Find("BulletSpawn");
+
         Debug.Log(currentSlot + " assigned");
         if (StartWeapon != true)
         {
@@ -120,7 +122,7 @@ public class WeaponManager : MonoBehaviour
             if (slotNo == 1)
             {
                 var bullet = Instantiate(Rocket, bulletSpawn.position, bulletSpawn.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * RocketSpeed;
+                bullet.GetComponent<Rigidbody>().velocity = TargetDirection * RocketSpeed;
               
             }
 
