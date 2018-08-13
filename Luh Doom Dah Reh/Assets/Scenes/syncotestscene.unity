@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 438593968}
   - component: {fileID: 438593970}
   - component: {fileID: 438593969}
+  - component: {fileID: 438593971}
   m_Layer: 0
   m_Name: Cylinder001
   m_TagString: Untagged
@@ -351,6 +352,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438593967}
   m_Mesh: {fileID: 4300000, guid: 2270b610e5db35b4296d28d1cf6b78ac, type: 3}
+--- !u!114 &438593971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438593967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98422fc9e23478448ae8b1a2ef7dcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &443450895
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +478,7 @@ GameObject:
   - component: {fileID: 1341059976}
   - component: {fileID: 1341059975}
   - component: {fileID: 1341059974}
+  - component: {fileID: 1341059977}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -542,6 +555,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341059972}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1341059977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341059972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98422fc9e23478448ae8b1a2ef7dcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1649120208
 Prefab:
   m_ObjectHideFlags: 0
