@@ -2913,7 +2913,7 @@ MonoBehaviour:
   onDeathSound: {fileID: 0}
   onFireSound: {fileID: 0}
   onHitSound: {fileID: 0}
-  onSpawnSound: {fileID: 0}
+  onSpawnSound: {fileID: 8300000, guid: dc3dd860144c1cb429b2ad8f47deb650, type: 3}
   gruntSound: {fileID: 0}
 --- !u!137 &137963987570826222
 SkinnedMeshRenderer:
