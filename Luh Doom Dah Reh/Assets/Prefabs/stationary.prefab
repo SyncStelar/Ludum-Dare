@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62aa3911692d7ae44b967cb59c495a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4615279233446116, guid: 529cc58885c928549acac8148f14a3b5, type: 2}
+  player: {fileID: 4982288701297146, guid: 1d2ad3bcc8fe910499c697679e25081c, type: 2}
 --- !u!114 &114746978805586858
 MonoBehaviour:
   m_ObjectHideFlags: 1
