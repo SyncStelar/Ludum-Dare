@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 114422106116175574}
   - component: {fileID: 82107947254476356}
   - component: {fileID: 54432386148747472}
+  - component: {fileID: 65206392340650064}
   m_Layer: 0
   m_Name: Flying
   m_TagString: Enemy
@@ -1189,7 +1190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1900494302336966
 GameObject:
   m_ObjectHideFlags: 1
@@ -2598,6 +2599,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.129259, y: 2.3341446, z: 7.062638}
   m_Center: {x: 0.014668524, y: -0.28497124, z: -0.5408523}
+--- !u!65 &65206392340650064
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455185088019564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.129259, y: 2.334145, z: 7.062638}
+  m_Center: {x: 0.01466852, y: 6.97, z: -0.5408523}
 --- !u!82 &82107947254476356
 AudioSource:
   m_ObjectHideFlags: 1

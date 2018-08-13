@@ -21,7 +21,6 @@ public class PlayerHP : MonoBehaviour {
         {
             Eliminate();
         }
-        HP.fillAmount = health;
     }
 
     // Update is called once per frame
