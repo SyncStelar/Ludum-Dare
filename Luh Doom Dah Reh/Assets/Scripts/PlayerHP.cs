@@ -28,6 +28,5 @@ public class PlayerHP : MonoBehaviour {
     void Eliminate()
     {
         SceneManager.LoadScene(gameOverSceneString);
-        Destroy(gameObject);
     }
 }

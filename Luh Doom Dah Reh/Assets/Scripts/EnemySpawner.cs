@@ -14,7 +14,6 @@ public class EnemySpawner : MonoBehaviour {
     [SerializeField] private GameObject enemyPrefab;
 
     [System.NonSerialized] public bool canSpawn = true;
-    [System.NonSerialized] public bool canSpawnCollider = true;
 
     //private float time = 0;
 
@@ -33,17 +32,5 @@ public class EnemySpawner : MonoBehaviour {
 
     public void SpawnEnemy() {
         Instantiate(enemyPrefab, spawnPos.transform.position, spawnPos.transform.rotation);
-    }
-
-    private void OnCollisionEnter(Collision collision) {
-        if (isStationary && collision.gameObject.tag == "Player") {
-            canSpawnCollider = false;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision) {
-        if (isStationary && collision.gameObject.tag == "Player") {
-            canSpawnCollider = true;
-        }
     }
 }

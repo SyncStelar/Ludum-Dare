@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 4030122062022750}
   - component: {fileID: 33973822612529456}
   - component: {fileID: 23651256399843206}
-  - component: {fileID: 136026822735194610}
   m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
@@ -282,6 +281,9 @@ GameObject:
   - component: {fileID: 114976255881526248}
   - component: {fileID: 54706235933673354}
   - component: {fileID: 82161265875995820}
+  - component: {fileID: 114168574007357338}
+  - component: {fileID: 136245376686716368}
+  - component: {fileID: 136925806790686274}
   m_Layer: 2
   m_Name: MainChar
   m_TagString: Player
@@ -1042,6 +1044,21 @@ MonoBehaviour:
   Num_Weapons: 2
   cam: {fileID: 20418048544989240}
   GunAnim: {fileID: 0}
+--- !u!114 &114168574007357338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935847338755376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f91a7ed09fd7f24b861f0c95197800c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  HP: {fileID: 0}
+  TargetHurt: {fileID: 0}
+  gameOverSceneString: 
 --- !u!114 &114482901657663458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1204,12 +1221,25 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997908035403818}
   m_Enabled: 1
---- !u!136 &136026822735194610
+--- !u!136 &136245376686716368
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1043184699088822}
+  m_GameObject: {fileID: 1935847338755376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!136 &136925806790686274
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935847338755376}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
