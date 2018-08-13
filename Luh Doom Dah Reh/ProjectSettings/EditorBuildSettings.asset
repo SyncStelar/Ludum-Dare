@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Rock Platforms.unity
     guid: e649f13657997ae4a9cc21cea14b1359
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: bdc6172d4ec7c94408ccc24c71a46f9a
   m_configObjects: {}

@@ -88,6 +88,11 @@ public class Platform : MonoBehaviour {
             Animator anim = appearGo[k].GetComponentInChildren<Animator>(true);
             AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 
+            if (info.normalizedTime >= -1 && info.IsName(isHidden.name)) {
+                appearGo.Remove(appearGo[k]);
+                k--;
+            }
+
             if (info.normalizedTime >= -1 && info.IsName(isIdle.name)) {
                 appearGo.Remove(appearGo[k]);
                 k--;
