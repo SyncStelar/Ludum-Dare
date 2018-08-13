@@ -1,20 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/syncotestscene.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/syncotestscene.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/MainMenu.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Roudro_Gunz.unity
-=======
-- path: Assets/Scenes/syncotestscene.unity
->>>>>>> 4d6d159fe86a641117142301867312adf8c06eff
->>>>>>> 010fc9c8a1a65b4e728d71cd886394d9ed43c5c5
->>>>>>> 8d75bbc4b299dda8b084e74daf514b5aa2d9ec88
->>>>>>> d3881380420272c88b602896e353e8a7575076cf
   isLoaded: 1
   isActive: 1
