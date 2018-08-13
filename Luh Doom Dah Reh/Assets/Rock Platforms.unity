@@ -1950,7 +1950,7 @@ MonoBehaviour:
   isAppear: {fileID: 7400000, guid: 22120f7f8fe657f4aafd50b0e1d00eee, type: 2}
   isHidden: {fileID: 7400000, guid: 1e0dbbc5faaa4a34aaa7835748639e95, type: 2}
   isIdle: {fileID: 7400000, guid: 75fa741eb5625384cb9ed30629731e56, type: 2}
-  maxNumOfEnemies: 5
+  maxNumOfEnemies: 7
   minSpawnRate: 5
   maxSpawnRate: 10
   spawnPercentChance: 100

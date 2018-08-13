@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/syncotestscene.unity
-=======
-- path: Assets/Scenes/Gunplay_Test.unity
->>>>>>> b2df82befcc87c5cd0f04df1877b94743f19a9a2
   isLoaded: 1
   isActive: 1
