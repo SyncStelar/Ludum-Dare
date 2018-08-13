@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Roudro_Gunz.unity
+=======
 - path: Assets/Scenes/syncotestscene.unity
+>>>>>>> 4d6d159fe86a641117142301867312adf8c06eff
   isLoaded: 1
   isActive: 1
