@@ -73,36 +73,43 @@ public class Platform : MonoBehaviour {
         List<GameObject> disappearGo = new List<GameObject>(list);
         List<GameObject> appearGo = new List<GameObject>(list);
 
+        Debug.Log("ChangePlatform 1");
+
         //removes x platforms from list of removing platforms.
         for (int i = 0; i < platformPerWave[(WaveCounter.waveCount - 1)]; i++) {
             disappearGo.RemoveAt(Random.Range(0, disappearGo.Count));
         }
+        Debug.Log("changePlatform 2");
 
         //removes platforms to be removed from scene from list of platforms to be returned.
-        for (int i = 0; i < disappearGo.Count; i++) {
-            appearGo.Remove(appearGo[i]);
+        for (int j = 0; j < disappearGo.Count; j++) {
+            appearGo.Remove(disappearGo[j]);
         }
 
+        Debug.Log("changePlatform 3");
+
         //check if that platform is running idle animation. if yes, remove those platforms from list of platforms to be returned.
-        for (int i = 0; i < appearGo.Count; i++) {
-            Animator anim = appearGo[i].GetComponentInChildren<Animator>(true);
+        for (int k = 0; k < appearGo.Count; k++) {
+            Animator anim = appearGo[k].GetComponentInChildren<Animator>(true);
             AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 
             if (info.normalizedTime >= -1 && info.IsName(isIdle.name)) {
-                appearGo.Remove(appearGo[i]);
-                i--;
+                appearGo.Remove(appearGo[k]);
+                k--;
             }
         }
+
+        Debug.Log("changePlatform 4");
 
         //set platforms to be removed into red and activate animation isLeave.
         foreach (GameObject go in disappearGo) {
             Animator anim = go.GetComponentInChildren<Animator>(true);
-            Renderer rend = go.GetComponentInChildren<Renderer>(true);
 
-            rend.material = coloredMat;
             anim.SetBool(leaveBoolString, true);
             go.GetComponent<EnemySpawner>().canSpawn = false;
         }
+
+        Debug.Log("changePlatform 5");
 
         //activate isAppear animation
         foreach (GameObject go in appearGo) {
@@ -120,9 +127,14 @@ public class Platform : MonoBehaviour {
 
             AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 
+            if (info.IsName(isLeave.name)) {
+                rend.material = coloredMat;
+            } else {
+                rend.material = originalMat;
+            }
+
             if (info.normalizedTime >= -1) {
                 if (info.IsName(isLeave.name)) {
-                    rend.material = originalMat;
                     anim.SetBool(leaveBoolString, false);
                 }
 

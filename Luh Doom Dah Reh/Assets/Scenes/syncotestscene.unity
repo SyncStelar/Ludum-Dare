@@ -729,6 +729,11 @@ Prefab:
       propertyPath: waveTextBox
       value: 
       objectReference: {fileID: 777575167}
+    - target: {fileID: 114494396440291856, guid: 6ab749f31267b5b4181715167701b826,
+        type: 2}
+      propertyPath: numOfOuterPlatformsPerWave.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab749f31267b5b4181715167701b826, type: 2}
   m_IsPrefabAsset: 0
