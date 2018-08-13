@@ -60,7 +60,7 @@ public class Platform : MonoBehaviour {
                     spawn = true;
                 }
                 if (spawn && EnemyAI.numEnemiesToSpawn > 0 && EnemyAI.numEnemiesLeft < maxNumOfEnemies) {
-                    if (goList[i].GetComponent<EnemySpawner>() && goList[i].GetComponent<EnemySpawner>().canSpawn && goList[i].GetComponent<EnemySpawner>().canSpawnCollider) {
+                    if (goList[i].GetComponent<EnemySpawner>() && goList[i].GetComponent<EnemySpawner>().canSpawn) {
                         goList[i].GetComponent<EnemySpawner>().SpawnEnemy();
                     }
                 }
