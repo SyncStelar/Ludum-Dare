@@ -73,20 +73,15 @@ public class Platform : MonoBehaviour {
         List<GameObject> disappearGo = new List<GameObject>(list);
         List<GameObject> appearGo = new List<GameObject>(list);
 
-        Debug.Log("ChangePlatform 1");
-
         //removes x platforms from list of removing platforms.
         for (int i = 0; i < platformPerWave[(WaveCounter.waveCount - 1)]; i++) {
             disappearGo.RemoveAt(Random.Range(0, disappearGo.Count));
         }
-        Debug.Log("changePlatform 2");
 
         //removes platforms to be removed from scene from list of platforms to be returned.
         for (int j = 0; j < disappearGo.Count; j++) {
             appearGo.Remove(disappearGo[j]);
         }
-
-        Debug.Log("changePlatform 3");
 
         //check if that platform is running idle animation. if yes, remove those platforms from list of platforms to be returned.
         for (int k = 0; k < appearGo.Count; k++) {
@@ -99,8 +94,6 @@ public class Platform : MonoBehaviour {
             }
         }
 
-        Debug.Log("changePlatform 4");
-
         //set platforms to be removed into red and activate animation isLeave.
         foreach (GameObject go in disappearGo) {
             Animator anim = go.GetComponentInChildren<Animator>(true);
@@ -108,8 +101,6 @@ public class Platform : MonoBehaviour {
             anim.SetBool(leaveBoolString, true);
             go.GetComponent<EnemySpawner>().canSpawn = false;
         }
-
-        Debug.Log("changePlatform 5");
 
         //activate isAppear animation
         foreach (GameObject go in appearGo) {
