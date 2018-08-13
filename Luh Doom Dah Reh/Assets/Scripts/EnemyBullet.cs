@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour {
     public float speed = 1f;
+    public float dmg = 15;
+
+    public Transform player;
+
+    private void Awake() {
+        transform.LookAt(player);
+    }
 
     private void Update() {
         transform.Translate(0, 0, speed, Space.Self); 
@@ -12,6 +19,10 @@ public class EnemyBullet : MonoBehaviour {
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag != "Enemy") {
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "Player") {
+            other.gameObject.GetComponent<PlayerHP>().TakenDamage(dmg);
         }
     }
 
