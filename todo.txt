@@ -1,9 +1,9 @@
-/ projectile gun = bullet velocity (short script)
-/ player = player movement + button presses (lclick, wasd, spacebar)
-/ hp = base 100 damage = 15. enemy fly hp = 50. dmg = 10. station enemy hp = 200, dmg = 25. enemy glows red if low hp (25% hp)
+o projectile gun = bullet velocity (short script)
+o player = player movement + button presses (lclick, wasd, spacebar)
+o hp = base 100 damage = 15. enemy fly hp = 50. dmg = 10. station enemy hp = 200, dmg = 25. enemy glows red if low hp (25% hp)
 o platform = platform array (each platform falls into a tier. rng which platform in each tier falls. ensure x number stays)
-/ enemy spawning = enemy spawns on platforms except platform player is on. (collision check) check if amount of enemies reaches x numbers to spawn.
-/ enemy ai = stationary (spawns on empty platform. shoots slow large fireballs) + flying (spawns in open spaces [where the platforms fell])
-/ enemy shooting = enemy shoots projectiles at player's direction
-/ wave counter = keep track of how many enemies in the wave. if no more enemies, start next wave.
+o enemy spawning = enemy spawns on platforms except platform player is on. (collision check) check if amount of enemies reaches x numbers to spawn.
+o enemy ai = stationary (spawns on empty platform. shoots slow large fireballs) + flying (spawns in open spaces [where the platforms fell])
+o enemy shooting = enemy shoots projectiles at player's direction
+o wave counter = keep track of how many enemies in the wave. if no more enemies, start next wave.
 / health kit drops = spawns on 

@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 82588230638656720}
   - component: {fileID: 54001529623899540}
   - component: {fileID: 65578933669156166}
+  - component: {fileID: 95090578759737094}
   m_Layer: 0
   m_Name: stationary
   m_TagString: Enemy
@@ -2169,6 +2170,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95090578759737094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231014846040924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b18317671645d5446a78c33f68c98c86, type: 3}
+  m_Controller: {fileID: 9100000, guid: eefaaf98c63a34c4db82ee86010311bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95534967016336722
 Animator:
   serializedVersion: 3
@@ -2219,10 +2238,10 @@ MonoBehaviour:
   hpLowMat: {fileID: 2100000, guid: 2581ae50d741e944d8c93bf54b789093, type: 2}
   fireballPrefab: {fileID: 1575344811762220, guid: e4e2d4be56d7d5c479b890e7f3974889,
     type: 2}
-  onDeathAnim: {fileID: 7400000, guid: f15eb0e948cf56f4ea239186806447d8, type: 2}
-  onFireAnim: {fileID: 7400000, guid: bc03b137d1c1503438374ee5fc0a8f17, type: 2}
-  onHitAnim: {fileID: 7400000, guid: 637a2facecdf24a47a46ac4da1c5024c, type: 2}
-  onSpawnAnim: {fileID: 7400000, guid: 6ce41694876eab846bdbf658bcd22a8b, type: 2}
+  onDeathAnim: {fileID: 7400000, guid: 3d5d96c173b693c4dadbc87909ff7f7b, type: 3}
+  onFireAnim: {fileID: 7400000, guid: 0019a1bb3aa2ea64680be16321305c87, type: 3}
+  onHitAnim: {fileID: 7400000, guid: ede89a8410bbaa744a9b8b6bcd1c2e3c, type: 3}
+  onSpawnAnim: {fileID: 7400000, guid: ede89a8410bbaa744a9b8b6bcd1c2e3c, type: 3}
   onDeathSound: {fileID: 0}
   onFireSound: {fileID: 0}
   onHitSound: {fileID: 0}
