@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
 
+    public float damage = 15f;
+
 	// Use this for initialization
 	void Start () {
         Destroy(gameObject, 4f);
@@ -21,7 +23,7 @@ public class ProjectileScript : MonoBehaviour {
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                collision.gameObject.GetComponent<EnemyAI>().TakeDamage(15f);
+                collision.gameObject.GetComponent<EnemyAI>().TakeDamage(damage);
                 Destroy(gameObject);
             }
             else

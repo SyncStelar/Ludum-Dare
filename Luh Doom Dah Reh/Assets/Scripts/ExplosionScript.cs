@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ExplosionScript : MonoBehaviour {
 
-    float radius = 10;
+    public float radius = 5f;
+    public float damage = 30f; 
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +27,7 @@ public class ExplosionScript : MonoBehaviour {
             {
                 float distance = Vector3.Distance(explosionPosition, hit.gameObject.transform.position);
                 float distanceMultiplier = radius - distance;
-                hit.gameObject.GetComponent<EnemyAI>().TakeDamage(40 * distanceMultiplier);
+                hit.gameObject.GetComponent<EnemyAI>().TakeDamage(damage * distanceMultiplier);
 
             }
             

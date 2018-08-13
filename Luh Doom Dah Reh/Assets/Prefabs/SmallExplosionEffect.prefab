@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bbc4e151ac58041929dc9ed0f230b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 6
+  damage: 30
 --- !u!198 &198492047958777896
 ParticleSystem:
   m_ObjectHideFlags: 1
