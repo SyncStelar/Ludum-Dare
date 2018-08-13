@@ -5,18 +5,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Cylinder001
     100002: //RootNode
-    100004: Sphere001
+    100004: Plane001
     400000: Cylinder001
     400002: //RootNode
-    400004: Sphere001
+    400004: Plane001
     2100000: 01 - Default
     2100002: 02 - Default
     2300000: Cylinder001
-    2300002: Sphere001
+    2300002: Plane001
     3300000: Cylinder001
-    3300002: Sphere001
+    3300002: Plane001
     4300000: Cylinder001
-    4300002: Sphere001
+    4300002: Plane001
   externalObjects: {}
   materials:
     importMaterials: 1
