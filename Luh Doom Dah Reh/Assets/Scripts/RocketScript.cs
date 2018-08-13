@@ -19,7 +19,7 @@ public class RocketScript : MonoBehaviour {
     void Update () {
 		
 	}
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
