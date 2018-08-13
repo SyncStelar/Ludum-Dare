@@ -27,7 +27,7 @@ public class ExplosionScript : MonoBehaviour {
             {
                 float distance = Vector3.Distance(explosionPosition, hit.gameObject.transform.position);
                 float distanceMultiplier = radius - distance;
-                hit.gameObject.GetComponent<EnemyAI>().TakeDamage(damage * distanceMultiplier);
+                hit.gameObject.GetComponent<EnemyAI>().TakeDamage(damage * Mathf.Abs(distanceMultiplier));
 
             }
             

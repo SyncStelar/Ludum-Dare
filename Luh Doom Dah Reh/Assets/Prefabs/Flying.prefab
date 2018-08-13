@@ -2926,7 +2926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4982288701297146, guid: 1d2ad3bcc8fe910499c697679e25081c, type: 2}
-  speed: 0.1
+  speed: 0.5
   maxDistanceFromPlayer: 10
 --- !u!114 &114655644520954560
 MonoBehaviour:
@@ -2955,7 +2955,7 @@ MonoBehaviour:
   onDeathSound: {fileID: 0}
   onFireSound: {fileID: 0}
   onHitSound: {fileID: 0}
-  onSpawnSound: {fileID: 8300000, guid: dc3dd860144c1cb429b2ad8f47deb650, type: 3}
+  onSpawnSound: {fileID: 0}
   gruntSound: {fileID: 0}
 --- !u!137 &137963987570826222
 SkinnedMeshRenderer:

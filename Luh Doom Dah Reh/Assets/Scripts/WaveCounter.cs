@@ -32,7 +32,7 @@ public class WaveCounter : MonoBehaviour {
         }
 
         if (EnemyAI.numEnemiesToSpawn == 0 && EnemyAI.numEnemiesLeft == 0) {
-            if (waveCount < numOfEnemiesToSpawnPerWave.Count) {
+            if (waveCount <= numOfEnemiesToSpawnPerWave.Count) {
                 waveCount++;
                 EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount];
                 platform.ChangePlatform(platform.goOuterLayer, platform.numOfOuterPlatformsPerWave);

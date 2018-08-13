@@ -210,9 +210,53 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1490446299952642, guid: 244ff8438aa0feb40b45eda3bd88e7a8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224438213536223852, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224438213536223852, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224027123517186324, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224027123517186324, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224547944027197718, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -33
+      objectReference: {fileID: 0}
+    - target: {fileID: 224761712910151008, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 224761712910151008, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244ff8438aa0feb40b45eda3bd88e7a8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!224 &204875071 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224972335676623384, guid: 244ff8438aa0feb40b45eda3bd88e7a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 129855404}
 --- !u!1 &418674406
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,56 +789,6 @@ Prefab:
       propertyPath: waveTextBox
       value: 
       objectReference: {fileID: 777575167}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[4]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[6]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[7]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[8]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054794189597544, guid: 6ab749f31267b5b4181715167701b826,
-        type: 2}
-      propertyPath: numOfEnemiesToSpawnPerWave.Array.data[9]
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab749f31267b5b4181715167701b826, type: 2}
   m_IsPrefabAsset: 0
@@ -842,6 +836,17 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114482901657663458, guid: 1d2ad3bcc8fe910499c697679e25081c,
+        type: 2}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 1076911875260774, guid: c21a90cf148d1a44097339a7731af306,
+        type: 2}
+    - target: {fileID: 114041289546349852, guid: 1d2ad3bcc8fe910499c697679e25081c,
+        type: 2}
+      propertyPath: weapon_ui
+      value: 
+      objectReference: {fileID: 204875071}
     m_RemovedComponents:
     - {fileID: 114168574007357338, guid: 1d2ad3bcc8fe910499c697679e25081c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 1d2ad3bcc8fe910499c697679e25081c, type: 2}

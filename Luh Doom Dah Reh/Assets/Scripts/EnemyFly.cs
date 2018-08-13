@@ -34,4 +34,8 @@ public class EnemyFly : MonoBehaviour {
 
         transform.Translate(new Vector3(x, 0, z) * speed * Time.deltaTime);
     }
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 }

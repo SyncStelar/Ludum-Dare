@@ -12514,8 +12514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveTextBox: {fileID: 0}
-  endSceneString: 
-  numOfEnemiesToSpawnPerWave: 0a000000140000001e0000001e0000002300000023000000280000002d0000002d00000064000000
+  endSceneString: PlayerWin
+  numOfEnemiesToSpawnPerWave: 0a0000000a0000000f0000000f000000140000001400000019000000190000001e0000001e00000000000000
   platform: {fileID: 114494396440291856}
 --- !u!114 &114058711912864922
 MonoBehaviour:
@@ -13089,8 +13089,8 @@ MonoBehaviour:
   isAppear: {fileID: 7400000, guid: 22120f7f8fe657f4aafd50b0e1d00eee, type: 2}
   isHidden: {fileID: 7400000, guid: 1e0dbbc5faaa4a34aaa7835748639e95, type: 2}
   isIdle: {fileID: 7400000, guid: 75fa741eb5625384cb9ed30629731e56, type: 2}
-  maxNumOfEnemies: 5
-  minSpawnRate: 5
+  maxNumOfEnemies: 7
+  minSpawnRate: 6
   maxSpawnRate: 10
   spawnPercentChance: 100
   originalMat: {fileID: 2100000, guid: 98bf1f3788707b14792cdb5a681758ce, type: 2}

@@ -7,6 +7,11 @@ public class EnemyStatic : MonoBehaviour {
     [SerializeField] private Transform player;
 
     private void FixedUpdate() {
+       
         transform.LookAt(player, Vector3.up);
+    }
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 }

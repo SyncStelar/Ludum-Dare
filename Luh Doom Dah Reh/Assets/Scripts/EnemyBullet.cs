@@ -9,6 +9,7 @@ public class EnemyBullet : MonoBehaviour {
     public Transform player;
 
     private void Awake() {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         transform.LookAt(player);
     }
 
@@ -17,12 +18,14 @@ public class EnemyBullet : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag != "Enemy") {
-            Destroy(gameObject);
+
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerHP>().TakenDamage(dmg);
         }
 
-        if (other.gameObject.tag == "Player") {
-            other.gameObject.GetComponent<PlayerHP>().TakenDamage(dmg);
+        if (other.gameObject.tag != "Enemy") {
+            Destroy(gameObject);
         }
     }
 
