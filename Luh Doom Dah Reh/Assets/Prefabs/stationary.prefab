@@ -2229,7 +2229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac5e828e538f14418d4815cbbf737d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 200
   hpDefault: 200
   hpLowPercent: 25
   minFireRate: 10

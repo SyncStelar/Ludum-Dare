@@ -12,6 +12,7 @@ public class WeaponManager : MonoBehaviour
     public int Num_Weapons = 2;
     public Camera cam;
     public Animator GunAnim;
+    public Transform weapon_ui;
     int slotNo;
     int lastSlot;
 
@@ -102,11 +103,17 @@ public class WeaponManager : MonoBehaviour
         if (currentSlot == 0)
         {
             GunAnim.Play("P_Gun_Draw");
+            weapon_ui.Find("RocketLauncher").gameObject.SetActive(false);
+
+            weapon_ui.Find("Pistol").gameObject.SetActive(true);
 
         }
         if (currentSlot == 1)
         {
             GunAnim.Play("RLauncher_Draw");
+            weapon_ui.Find("Pistol").gameObject.SetActive(false);
+
+            weapon_ui.Find("RocketLauncher").gameObject.SetActive(true);
 
         }
         Debug.Log(currentSlot + " assigned");

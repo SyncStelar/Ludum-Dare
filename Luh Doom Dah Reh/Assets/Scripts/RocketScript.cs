@@ -25,7 +25,7 @@ public class RocketScript : MonoBehaviour {
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                collision.gameObject.GetComponent<EnemyAI>().TakeDamage(Damage);
+                //collision.gameObject.GetComponent<EnemyAI>().TakeDamage(Damage);
                 Explode();
             }
             else
