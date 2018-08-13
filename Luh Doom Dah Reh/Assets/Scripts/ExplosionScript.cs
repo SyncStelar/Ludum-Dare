@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class ExplosionScript : MonoBehaviour {
 
-    SphereCollider Item;
+    float radius = 10;
 
 	// Use this for initialization
 	void Start () {
-        Item = gameObject.GetComponent<SphereCollider>();
-        ScanForItems(Item);
+        Explode();
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
-    void ScanForItems(SphereCollider Item)
+    void Explode()
     {
-        Vector3 center = Item.transform.position + Item.center;
-        float radius = Item.radius;
+        Vector3 explosionPosition = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPosition, radius);
+        foreach (Collider hit in colliders)
+        {
+            if(hit.gameObject.tag == "Enemy")
+            {
+                float distance = Vector3.Distance(explosionPosition, hit.gameObject.transform.position);
+                float distanceMultiplier = radius - distance;
+                hit.gameObject.GetComponent<EnemyAI>().TakeDamage(40 * distanceMultiplier);
 
-        Collider[] allOverlappingColliders = Physics.OverlapSphere(center, radius);
+            }
+            
+        }
+        Destroy(gameObject,1f);
     }
 }
