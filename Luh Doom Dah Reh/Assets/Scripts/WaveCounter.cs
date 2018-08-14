@@ -17,7 +17,7 @@ public class WaveCounter : MonoBehaviour {
 
     private void Start() {
         if (waveTextBox != null) {
-            waveCount++;
+            waveCount = 1;
             waveTextBox.text = "Wave 1";
             Debug.Log("Wave Count: " + waveCount);
             EnemyAI.numEnemiesToSpawn = numOfEnemiesToSpawnPerWave[waveCount - 1];

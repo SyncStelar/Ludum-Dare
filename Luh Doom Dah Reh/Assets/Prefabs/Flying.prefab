@@ -2942,8 +2942,8 @@ MonoBehaviour:
   hp: 50
   hpDefault: 100
   hpLowPercent: 25
-  minFireRate: 10
-  maxFireRate: 20
+  minFireRate: 3
+  maxFireRate: 5
   bulletSpawnPos: {fileID: 4636647548833698}
   hpLowMat: {fileID: 2100000, guid: 2581ae50d741e944d8c93bf54b789093, type: 2}
   fireballPrefab: {fileID: 1767996878980502, guid: c8ba13e8b9b920e4c98bc275b249373a,

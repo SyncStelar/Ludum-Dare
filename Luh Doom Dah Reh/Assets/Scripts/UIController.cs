@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
 
+    private void Start() {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     public void ChangeScene(string SceneName) {
         SceneManager.LoadScene(SceneName);
